@@ -17,7 +17,7 @@ Variants {
 												right: true
 								}
 
-								exclusiveZone: 40
+								exclusiveZone: 15
 
 								color: "transparent"
 								implicitHeight: 60
@@ -29,7 +29,7 @@ Variants {
 												anchors.horizontalCenter: parent.horizontalCenter
 												anchors.top: parent.top
 
-												// color: "#5E0096" // purple version
+												//color: "#5E0096" // purple version
 												color: "#85222222" // transparent version
 												
 												radius: 20
