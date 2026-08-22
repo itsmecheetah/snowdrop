@@ -2,6 +2,7 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
+import Quickshell.Hyprland
 
 Variants {
 				model: Quickshell.screens
@@ -17,40 +18,71 @@ Variants {
 												right: true
 								}
 
-								exclusiveZone: 15
+								margins {
+												top: 5
+												//left: 5
+												//right: 5
+								}
+
+								implicitHeight: 40
+
+								exclusiveZone: 10
 
 								color: "transparent"
-								implicitHeight: 60
+
+								mask: Region {
+												item: barRect
+								}
 
 								Rectangle {
-												width: 200
+												id: barRect
+
+												width: 250
 												height: 40
 
 												anchors.horizontalCenter: parent.horizontalCenter
 												anchors.top: parent.top
 
+												//anchors.fill: parent
+												
 												//color: "#5E0096" // purple version
 												color: "#85222222" // transparent version
 												
-												radius: 20
+												radius: 16
+												//radius: 20
 
 												border.color: "#ffffff"
-												border.width: 2
-
-												anchors.topMargin: 5
+												border.width: 2										
 
 												Row {
-																spacing: 10
+																spacing: 20
 
 																anchors.verticalCenter: parent.verticalCenter
 																anchors.horizontalCenter: parent.horizontalCenter
 
-																Text {
+																Image {
+																				source: "nix.png"
+																				sourceSize.width: 23
 
-																				font.pixelSize: 21
+																				anchors.verticalCenter: parent.verticalCenter
+																}
+
+																Text { 
+																				font.pixelSize: 19
 																				color: "white"
 
 																				text: "hh:mm"
+
+																				anchors.verticalCenter: parent.verticalCenter
+																}
+
+																Text {
+																				font.pixelSize: 18
+																				color: "white"
+
+																				text: "100%"
+
+																				anchors.verticalCenter: parent.verticalCenter
 																}
 												}
 								}
