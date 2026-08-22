@@ -37,7 +37,7 @@ Variants {
 								Rectangle {
 												id: barRect
 
-												width: 250
+												width: 260
 												height: 40
 
 												anchors.horizontalCenter: parent.horizontalCenter
@@ -80,7 +80,7 @@ Variants {
 																				font.pixelSize: 19
 																				color: "white"
 
-																				text: "100%"
+																				text: Connection.connectionStateWithExtras
 
 																				anchors.verticalCenter: parent.verticalCenter
 																}
