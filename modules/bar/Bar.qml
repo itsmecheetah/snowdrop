@@ -71,13 +71,13 @@ Variants {
 																				font.pixelSize: 19
 																				color: "white"
 
-																				text: "hh:mm"
+																				text: Time.time
 
 																				anchors.verticalCenter: parent.verticalCenter
 																}
 
 																Text {
-																				font.pixelSize: 18
+																				font.pixelSize: 19
 																				color: "white"
 
 																				text: "100%"
