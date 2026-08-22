@@ -17,26 +17,42 @@ Variants {
 												right: true
 								}
 
-								margins {
-												left: 1000
-												right: 1000
-												top: 10
-												bottom: 0
-								}
-
-								exclusiveZone: 10
+								exclusiveZone: 40
 
 								color: "transparent"
-								implicitHeight: 40
+								implicitHeight: 60
 
 								Rectangle {
-												color: "#5E0096"
-												anchors.fill: parent
+												width: 200
+												height: 40
+
+												anchors.horizontalCenter: parent.horizontalCenter
+												anchors.top: parent.top
+
+												// color: "#5E0096" // purple version
+												color: "#85222222" // transparent version
 												
 												radius: 20
 
 												border.color: "#ffffff"
 												border.width: 2
+
+												anchors.topMargin: 5
+
+												Row {
+																spacing: 10
+
+																anchors.verticalCenter: parent.verticalCenter
+																anchors.horizontalCenter: parent.horizontalCenter
+
+																Text {
+
+																				font.pixelSize: 21
+																				color: "white"
+
+																				text: "hh:mm"
+																}
+												}
 								}
 				}
 }
