@@ -36,7 +36,6 @@ Variants {
 												anchors.horizontalCenter: parent.horizontalCenter
 												anchors.top: parent.top
 												
-												//color: "#5E0096" // purple version
 												color: "#85222222" // transparent version
 												
 												radius: 16
