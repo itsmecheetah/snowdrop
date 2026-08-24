@@ -14,15 +14,13 @@ Variants {
 
 								anchors {
 												top: true
-												left: true
-												right: true
+												left: false
+												right: false
 								}
 
-								margins {
-												top: 5
-												//left: 5
-												//right: 5
-								}
+								margins.top: 5
+
+								width: 260
 
 								implicitHeight: 40
 
@@ -30,20 +28,13 @@ Variants {
 
 								color: "transparent"
 
-								mask: Region {
-												item: barRect
-								}
-
 								Rectangle {
 												id: barRect
-
-												width: 260
-												height: 40
+												
+												anchors.fill: parent
 
 												anchors.horizontalCenter: parent.horizontalCenter
 												anchors.top: parent.top
-
-												//anchors.fill: parent
 												
 												//color: "#5E0096" // purple version
 												color: "#85222222" // transparent version
