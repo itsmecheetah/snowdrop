@@ -2,6 +2,7 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls
 import Quickshell.Hyprland
 
 Variants {
@@ -45,7 +46,7 @@ Variants {
 												border.width: 2										
 
 												Row {
-																spacing: 20
+																spacing: 15
 
 																anchors.verticalCenter: parent.verticalCenter
 																anchors.horizontalCenter: parent.horizontalCenter
@@ -57,22 +58,49 @@ Variants {
 																				anchors.verticalCenter: parent.verticalCenter
 																}
 
-																Text { 
-																				font.pixelSize: 19
-																				color: "white"
+																Button {
+																				id: timeIndicator
 
-																				text: Time.time
+																				background: Rectangle {
+																								color: timeIndicator.hovered ? "#50000000" : "#00000000"
+																								radius: 16
+																				}
+
+																				contentItem: Text {
+																								font.pixelSize: 19
+																								color: "white"
+
+																								text: Time.time
+																								anchors.verticalCenter: parent.verticalCenter
+																				}
 
 																				anchors.verticalCenter: parent.verticalCenter
+
+																				flat: true
+																				hoverEnabled: true
 																}
 
-																Text {
-																				font.pixelSize: 19
-																				color: "white"
+																Button {
+																				id: connectionIndicator
 
-																				text: Connection.connectionStateWithExtras
+																				background: Rectangle {
+																								color: connectionIndicator.hovered ? "#50000000" : "#00000000"
+																								radius: 16
+																				}
+
+																				contentItem: Text {
+																								font.pixelSize: 19
+																								color: "white"
+
+																								text: Connection.connectionStateWithExtras
+																								anchors.verticalCenter: parent.verticalCenter
+																				}
 
 																				anchors.verticalCenter: parent.verticalCenter
+
+																				flat: true
+																				hoverEnabled: true
+
 																}
 												}
 								}
