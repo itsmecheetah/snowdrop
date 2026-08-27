@@ -37,10 +37,9 @@ Variants {
 												anchors.horizontalCenter: parent.horizontalCenter
 												anchors.top: parent.top
 												
-												color: "#85222222" // transparent version
-												
+												color: "#85222222"
+
 												radius: 16
-												//radius: 20
 
 												border.color: "#ffffff"
 												border.width: 2										
