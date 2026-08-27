@@ -21,7 +21,9 @@ Variants {
 
 								margins.top: 5
 
-								width: 260
+								//width: 260
+								
+								width: rowLayout.width + 40
 
 								implicitHeight: 40
 
@@ -44,8 +46,12 @@ Variants {
 												border.color: "#ffffff"
 												border.width: 2										
 
-												Row {
-																spacing: 15
+												RowLayout {
+																id: rowLayout
+
+																spacing: 10
+
+																Layout.preferredWidth: 0
 
 																anchors.verticalCenter: parent.verticalCenter
 																anchors.horizontalCenter: parent.horizontalCenter
