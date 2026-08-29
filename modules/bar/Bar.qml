@@ -9,6 +9,7 @@ Variants {
 				model: Quickshell.screens
 
 				PanelWindow {
+								id: window
 
 								required property var modelData
 								screen: modelData
@@ -83,6 +84,41 @@ Variants {
 
 																				flat: true
 																				hoverEnabled: true
+
+																				onClicked: popupLoader.item.visible = !popupLoader.item.visible
+
+																				LazyLoader {
+																								id: popupLoader
+
+																								loading: true
+
+																								PopupWindow {
+																												visible: true
+
+																												color: "transparent"
+
+																												parentWindow: window
+
+																												//relativeX: window.width / 2 - width / 2
+																												//relativeY: -height
+
+																												anchor.rect.x: parentWindow.width / 2 - width / 2
+
+																												anchor.rect.y: 50
+
+																												Rectangle {
+																																anchors.fill: parent
+																																radius: 14
+																																
+																																Text {
+																																				text: "i gtg i'll finish this later"
+																																}
+																												}
+
+																												width: rowLayout.width + 40
+																												height: 200
+																								}
+																				}
 																}
 
 																Button {
