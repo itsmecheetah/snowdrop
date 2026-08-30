@@ -57,12 +57,74 @@ Variants {
 																anchors.verticalCenter: parent.verticalCenter
 																anchors.horizontalCenter: parent.horizontalCenter
 
-																Image {
-																				source: "nix.png"
-																				sourceSize.width: 23
+																Button {
+																				id: systemLogo
+
+																				background: Rectangle {
+																								color: systemLogo.hovered ? "#50000000" : "#00000000"
+																								radius: 16
+																				}
+
+																				contentItem: Image {
+																								source: "nix.png"
+																								sourceSize.width: 23
+
+																								anchors.verticalCenter: parent.verticalCenter
+																				}
 
 																				anchors.verticalCenter: parent.verticalCenter
+
+																				flat: true
+																				hoverEnabled: true
+
+																				onClicked: {
+																								sysinfoLoader.item.visible = !sysinfoLoader.item.visible;
+																								connectionLoader.item.visible = false;
+																								dateLoader.item.visible = false;
+																				}
+
+																				LazyLoader {
+																								id: sysinfoLoader
+
+																								loading: true
+
+																								PanelWindow {
+																												visible: false
+																												
+																												exclusiveZone: 0
+
+																												color: "transparent"
+
+																												anchors.top: true
+
+																												width: rowLayout.width + 40
+																												height: 100
+
+																												margins.top: 40
+
+																												Rectangle {
+																																anchors.fill: parent
+																																radius: 16
+
+																																border.color: "white"
+																																border.width: 2
+
+																																color: "#85222222"
+
+																																Text {
+																																				color: "white"
+																																				font.pixelSize: 15
+																																				text: "This'll be neofetch, basically"
+
+																																				anchors.horizontalCenter: parent.horizontalCenter
+																																				anchors.verticalCenter: parent.verticalCenter
+																																}
+																												}
+																								}
+																				}
 																}
+
+
 
 
 																Button {
@@ -89,6 +151,7 @@ Variants {
 																				onClicked: {
 																								dateLoader.item.visible = !dateLoader.item.visible;
 																								connectionLoader.item.visible = false;
+																								sysinfoLoader.item.visible = false;
 																				}
 
 																				LazyLoader {
@@ -156,6 +219,7 @@ Variants {
 																				onClicked: {
 																								connectionLoader.item.visible = !connectionLoader.item.visible;
 																								dateLoader.item.visible = false;
+																								sysinfoLoader.item.visible = false;
 																				}
 
 																				LazyLoader {
