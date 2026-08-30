@@ -86,10 +86,10 @@ Variants {
 																				flat: true
 																				hoverEnabled: true
 
-																				onClicked: popupLoader.item.visible = !popupLoader.item.visible
+																				onClicked: dateLoader.item.visible = !dateLoader.item.visible
 
 																				LazyLoader {
-																								id: popupLoader
+																								id: dateLoader
 
 																								loading: true
 
@@ -149,6 +149,44 @@ Variants {
 
 																				flat: true
 																				hoverEnabled: true
+
+																				onClicked: connectionLoader.item.visible = !connectionLoader.item.visible
+
+																				LazyLoader {
+																								id: connectionLoader
+
+																								loading: true
+
+																								PanelWindow {
+																												visible: false
+																												exclusiveZone: 0
+																												color: "transparent"
+																												anchors.top: true
+																												width: rowLayout.width + 40
+																												height: 100
+
+																												margins.top: 40
+
+																												Rectangle {
+																																anchors.fill: parent
+																																radius: 16
+
+																																border.color: "white"
+																																border.width: 2
+
+																																color: "#85222222"
+
+																																Text {
+																																				color: "white"
+																																				text: "networking shit"
+																																				font.pixelSize: 19
+
+																																				anchors.verticalCenter: parent.verticalCenter
+																																				anchors.horizontalCenter: parent.horizontalCenter
+																																}
+																												}
+																								}
+																				}
 
 																}
 												}
