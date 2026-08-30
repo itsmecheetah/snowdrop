@@ -64,6 +64,7 @@ Variants {
 																				anchors.verticalCenter: parent.verticalCenter
 																}
 
+
 																Button {
 																				id: timeIndicator
 
@@ -92,31 +93,38 @@ Variants {
 
 																								loading: true
 
-																								PopupWindow {
-																												visible: true
+																								PanelWindow {
+																												visible: false
+
+																												exclusiveZone: 0
 
 																												color: "transparent"
 
-																												parentWindow: window
+																												anchors.top: true
 
-																												//relativeX: window.width / 2 - width / 2
-																												//relativeY: -height
+																												width: rowLayout.width + 40
+																												height: 100
 
-																												anchor.rect.x: parentWindow.width / 2 - width / 2
-
-																												anchor.rect.y: 50
+																												margins.top: 40
 
 																												Rectangle {
 																																anchors.fill: parent
-																																radius: 14
+																																radius: 16
+
+																																border.color: "white"
+																																border.width: 2
+
+																																color: "#85222222"
 																																
 																																Text {
-																																				text: "i gtg i'll finish this later"
+																																				text: Time.date
+																																				font.pixelSize: 25
+																																				color: "white"
+
+																																				anchors.verticalCenter: parent.verticalCenter
+																																				anchors.horizontalCenter: parent.horizontalCenter
 																																}
 																												}
-
-																												width: rowLayout.width + 40
-																												height: 200
 																								}
 																				}
 																}
