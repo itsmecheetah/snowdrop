@@ -86,7 +86,10 @@ Variants {
 																				flat: true
 																				hoverEnabled: true
 
-																				onClicked: dateLoader.item.visible = !dateLoader.item.visible
+																				onClicked: {
+																								dateLoader.item.visible = !dateLoader.item.visible;
+																								connectionLoader.item.visible = false;
+																				}
 
 																				LazyLoader {
 																								id: dateLoader
@@ -149,8 +152,11 @@ Variants {
 
 																				flat: true
 																				hoverEnabled: true
-
-																				onClicked: connectionLoader.item.visible = !connectionLoader.item.visible
+																				
+																				onClicked: {
+																								connectionLoader.item.visible = !connectionLoader.item.visible;
+																								dateLoader.item.visible = false;
+																				}
 
 																				LazyLoader {
 																								id: connectionLoader
