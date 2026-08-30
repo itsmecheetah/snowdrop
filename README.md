@@ -2,6 +2,7 @@
 ## Features
 * Clock
 * Connection indicator
+* Date dropdown
 
 More to come soon!
 
