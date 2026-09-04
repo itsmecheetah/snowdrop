@@ -248,7 +248,7 @@ Variants {
 
 																																Text {
 																																				color: "white"
-																																				text: "networking shit"
+																																				text: "i exclusively use \nethernet bc desktop\nso i'll do this if i get\na laptop (wifi selector)"
 																																				font.pixelSize: 19
 
 																																				anchors.verticalCenter: parent.verticalCenter
