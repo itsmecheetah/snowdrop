@@ -28,13 +28,13 @@ Variants {
 
 								implicitHeight: 40
 
-								exclusiveZone: 10
+								exclusiveZone: (implicitHeight - 20) / 2
 
 								color: "transparent"
 
 								Rectangle {
 												id: barRect
-												
+											
 												anchors.fill: parent
 
 												anchors.horizontalCenter: parent.horizontalCenter
