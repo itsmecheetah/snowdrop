@@ -4,6 +4,15 @@ pragma Singleton
 import Quickshell
 import Quickshell.Io
 
+property alias topMargin: adapter.topMargin
+property alias height: adapter.height
+property alias exclusiveZoneOffset: adapter.exclusiveZoneOffset
+property alias rounding: adapter.rounding
+property alias borderWidth: adapter.borderWidth
+property alias componentSpacing: adapter.componentSpacing
+property alias componentSize: adapter.componentSize
+property alias colors: adapter.colors
+
 Singleton {
 	FileView {
 		path: "~/.config/snowdrop-shell/config.json"
@@ -13,6 +22,8 @@ Singleton {
 		onAdapterUpdated: writeAdapter()
 
 		JsonAdapter {
+			id: adapter
+
 			property int topMargin: 5
 			property int height: 40
 			property int exclusiveZoneOffset: 20
