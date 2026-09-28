@@ -14,12 +14,22 @@ Singleton {
 	property alias componentSize: adapter.componentSize
 	property alias colors: adapter.colors
 
+	Process {
+		running: true
+    command: ["mkdir", "-p", Quickshell.env("HOME") + "/.config/snowdrop-shell"]
+   }
+
 	FileView {
-		path: "~/.config/snowdrop-shell/config.json"
+		path: Quickshell.env("HOME") + "/.config/snowdrop-shell/config.json"
 
 		watchChanges: true
 		onFileChanged: reload()
 		onAdapterUpdated: writeAdapter()
+
+		onLoadFailed: error => {
+			if (error == FileViewError.FileNotFound)
+				writeAdapter()
+		}
 
 		JsonAdapter {
 			id: adapter
