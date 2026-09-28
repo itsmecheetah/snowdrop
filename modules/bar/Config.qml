@@ -13,6 +13,7 @@ Singleton {
 	property alias componentSpacing: adapter.componentSpacing
 	property alias componentSize: adapter.componentSize
 	property alias colors: adapter.colors
+	property alias modules: adapter.modules
 
 	Process {
 		running: true
@@ -48,6 +49,22 @@ Singleton {
 				property string background: "#85222222"
 				property string border: "#ffffff"
 				property string text: "#ffffff"
+			}
+
+			property JsonObject modules: JsonObject {
+				property JsonObject icon: JsonObject {
+					property bool enabled: true
+				}
+				property JsonObject clock: JsonObject {
+					property bool enabled: true
+					property string format: "hh:mm"
+				}
+				property JsonObject connectivity: JsonObject {
+					property bool enabled: true
+				}
+				property JsonObject battery: JsonObject {
+					property bool enabled: true
+				}
 			}
 		}
 	}

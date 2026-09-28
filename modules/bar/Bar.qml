@@ -36,7 +36,8 @@ Variants {
                 Layout.preferredWidth : 0
                 anchors.verticalCenter : parent.verticalCenter
                 anchors.horizontalCenter : parent.horizontalCenter
-                Button {
+								Button {
+										visible : Config.modules.icon.enabled
                     id : systemLogo
                     background : Rectangle {
                         color : systemLogo.hovered
@@ -90,7 +91,8 @@ Variants {
                     }
                 }
                 Button {
-                    id : timeIndicator
+										id : timeIndicator
+										visible : Config.modules.clock.enabled
                     background : Rectangle {
                         color : timeIndicator.hovered
                             ? "#50000000"
@@ -145,6 +147,7 @@ Variants {
                 }
                 Button {
                     id : connectionIndicator
+										visible : Config.modules.connectivity.enabled
                     background : Rectangle {
                         color : connectionIndicator.hovered
                             ? "#50000000"
