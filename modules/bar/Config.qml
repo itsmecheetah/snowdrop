@@ -1,5 +1,3 @@
-// WARNING: Not yet implemented
-
 // To make changes to your configuration, you should edit ~/.config/snowdrop-shell/config.json
 
 import Quickshell

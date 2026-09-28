@@ -16,23 +16,23 @@ Variants {
             left : false
             right : false
         }
-        margins.top : 5 // width: 260
+        margins.top : Config.topMargin // width: 260
         width : rowLayout.width + 40
-        implicitHeight : 40
-        exclusiveZone : (implicitHeight - 20) / 2
+        implicitHeight : Config.height
+        exclusiveZone : (implicitHeight - Config.exclusiveZoneOffset) / 2
         color : "transparent"
         Rectangle {
             id : barRect
             anchors.fill : parent
             anchors.horizontalCenter : parent.horizontalCenter
             anchors.top : parent.top
-            color : "#85222222"
-            radius : 16
-            border.color : "#ffffff"
-            border.width : 2
+            color : Config.colors.background
+            radius : Config.rounding
+            border.color : Config.colors.border
+            border.width : Config.borderWidth
             RowLayout {
                 id : rowLayout
-                spacing : 10
+                spacing : Config.componentSpacing
                 Layout.preferredWidth : 0
                 anchors.verticalCenter : parent.verticalCenter
                 anchors.horizontalCenter : parent.horizontalCenter
@@ -74,12 +74,12 @@ Variants {
                             margins.top : 40
                             Rectangle {
                                 anchors.fill : parent
-                                radius : 16
-                                border.color : "white"
-                                border.width : 2
-                                color : "#85222222"
+                                radius : Config.rounding
+                                border.color : Config.colors.border
+                                border.width : Config.borderWidth
+                                color : Config.colors.background
                                 Text {
-                                    color : "white"
+                                    color : Config.colors.text
                                     font.pixelSize : 15
                                     text : "This'll be neofetch, basically"
                                     anchors.horizontalCenter : parent.horizontalCenter
@@ -98,8 +98,8 @@ Variants {
                         radius : 16
                     }
                     contentItem : Text {
-                        font.pixelSize : 19
-                        color : "white"
+                        font.pixelSize : Config.componentSize
+                        color : Config.colors.text
                         text : Time.time
                         anchors.verticalCenter : parent.verticalCenter
                     }
@@ -128,14 +128,14 @@ Variants {
                             margins.top : 40
                             Rectangle {
                                 anchors.fill : parent
-                                radius : 16
-                                border.color : "white"
-                                border.width : 2
-                                color : "#85222222"
+                                radius : Config.rounding
+                                border.color : Config.colors.border
+                                border.width : Config.borderWidth
+                                color : Config.colors.background
                                 Text {
                                     text : Time.date
                                     font.pixelSize : 25
-                                    color : "white"
+                                    color : Config.colors.text
                                     anchors.verticalCenter : parent.verticalCenter
                                     anchors.horizontalCenter : parent.horizontalCenter
                                 }
@@ -153,7 +153,7 @@ Variants {
                     }
                     contentItem : Text {
                         font.pixelSize : 19
-                        color : "white"
+                        color : Config.colors.text
                         text : Connection.connectionStateWithExtras
                         anchors.verticalCenter : parent.verticalCenter
                     }
@@ -182,14 +182,14 @@ Variants {
                             margins.top : 40
                             Rectangle {
                                 anchors.fill : parent
-                                radius : 16
-                                border.color : "white"
-                                border.width : 2
-                                color : "#85222222"
+                                radius : Config.rounding
+                                border.color : Config.colors.border
+                                border.width : Config.borderWidth
+                                color : Config.colors.background
                                 Text {
-                                    color : "white"
+                                    color : Config.colors.text
                                     text : "i exclusively use \nethernet bc desktop\nso i'll do this if i get\na laptop (wifi selector)"
-                                    font.pixelSize : 19
+                                    font.pixelSize : Config.componentSize
                                     anchors.verticalCenter : parent.verticalCenter
                                     anchors.horizontalCenter : parent.horizontalCenter
                                 }
