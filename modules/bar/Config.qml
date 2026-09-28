@@ -4,16 +4,16 @@ pragma Singleton
 import Quickshell
 import Quickshell.Io
 
-property alias topMargin: adapter.topMargin
-property alias height: adapter.height
-property alias exclusiveZoneOffset: adapter.exclusiveZoneOffset
-property alias rounding: adapter.rounding
-property alias borderWidth: adapter.borderWidth
-property alias componentSpacing: adapter.componentSpacing
-property alias componentSize: adapter.componentSize
-property alias colors: adapter.colors
-
 Singleton {
+	property alias topMargin: adapter.topMargin
+	property alias height: adapter.height
+	property alias exclusiveZoneOffset: adapter.exclusiveZoneOffset
+	property alias rounding: adapter.rounding
+	property alias borderWidth: adapter.borderWidth
+	property alias componentSpacing: adapter.componentSpacing
+	property alias componentSize: adapter.componentSize
+	property alias colors: adapter.colors
+
 	FileView {
 		path: "~/.config/snowdrop-shell/config.json"
 
