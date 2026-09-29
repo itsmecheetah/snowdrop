@@ -211,7 +211,8 @@ Variants {
                     hoverEnabled : true
                     onClicked : {
                         batteryLoader.item.visible = !batteryLoader.item.visible
-                        dateLoader.item.visible = false
+												connectionIndicator.item.visible = false
+												dateLoader.item.visible = false
 												sysinfoLoader.item.visible = false
                     }
                     LazyLoader {
