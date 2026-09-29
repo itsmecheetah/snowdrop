@@ -37,7 +37,7 @@ Singleton {
             ? "Unknown"
             : currentDevice.state === ConnectionState.Connected
                 ? currentDevice.type === DeviceType.Wifi
-                    ? currentWifiNetwork.name + " (" + currentWifiNetwork.signalStrength + ")"
+                    ? currentWifiNetwork.name + " (" + (currentWifiNetwork.signalStrength).toFixed(2) + ")"
                     : "Ethernet"
                 : "impossible"
             }
