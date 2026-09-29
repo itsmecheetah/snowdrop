@@ -54,13 +54,10 @@ Variants {
                     flat : true
                     hoverEnabled : true
                     onClicked : {
-                        sysinfoLoader.item.visible = !sysinfoLoader
-                            .item
-                            .visible
-                            connectionLoader
-                            .item
-                            .visible = false
-                        dateLoader.item.visible = false
+                        sysinfoLoader.item.visible = !sysinfoLoader.item.visible
+                        connectionLoader.item.visible = false
+												dateLoader.item.visible = false
+												batteryLoader.item.visible = false
                     }
                     LazyLoader {
                         id : sysinfoLoader
@@ -109,13 +106,10 @@ Variants {
                     flat : true
                     hoverEnabled : true
                     onClicked : {
-                        dateLoader.item.visible = !dateLoader
-                            .item
-                            .visible
-                            connectionLoader
-                            .item
-                            .visible = false
-                        sysinfoLoader.item.visible = false
+                        dateLoader.item.visible = !dateLoader.item.visible
+                        connectionLoader.item.visible = false
+												sysinfoLoader.item.visible = false
+												batteryLoader.item.visible = false
                     }
                     LazyLoader {
                         id : dateLoader
@@ -145,7 +139,7 @@ Variants {
                         }
                     }
                 }
-                Button {
+								Button {
                     id : connectionIndicator
 										visible : Config.modules.connectivity.enabled
                     background : Rectangle {
@@ -164,13 +158,10 @@ Variants {
                     flat : true
                     hoverEnabled : true
                     onClicked : {
-                        connectionLoader.item.visible = !connectionLoader
-                            .item
-                            .visible
-                            dateLoader
-                            .item
-                            .visible = false
-                        sysinfoLoader.item.visible = false
+                        connectionLoader.item.visible = !connectionLoader.item.visible
+												dateLoader.item.visible = false
+												sysinfoLoader.item.visible = false
+												batteryLoader.item.visible = false
                     }
                     LazyLoader {
                         id : connectionLoader
@@ -197,8 +188,60 @@ Variants {
                                     anchors.horizontalCenter : parent.horizontalCenter
                                 }
                             }
-                        }
+													}
+												}
+											}
+											Button {
+                    id : batteryIndicator
+										visible : Config.modules.battery.enabled
+                    background : Rectangle {
+                        color : batteryIndicator.hovered
+                            ? "#50000000"
+                            : "#00000000"
+                        radius : 16
                     }
+                    contentItem : Text {
+                        font.pixelSize : 19
+                        color : Config.colors.text
+                        text : Battery.currentPercentage
+                        anchors.verticalCenter : parent.verticalCenter
+                    }
+                    anchors.verticalCenter : parent.verticalCenter
+                    flat : true
+                    hoverEnabled : true
+                    onClicked : {
+                        batteryLoader.item.visible = !batteryLoader.item.visible
+                        dateLoader.item.visible = false
+												sysinfoLoader.item.visible = false
+                    }
+                    LazyLoader {
+                        id : batteryLoader
+                        loading : true
+                        PanelWindow {
+                            visible : false
+                            exclusiveZone : 0
+                            color : "transparent"
+                            anchors.top : true
+                            width : rowLayout.width + 40
+                            height : 100
+                            margins.top : 40
+                            Rectangle {
+                                anchors.fill : parent
+                                radius : Config.rounding
+                                border.color : Config.colors.border
+                                border.width : Config.borderWidth
+                                color : Config.colors.background
+                                Text {
+                                    color : Config.colors.text
+                                    text : "battery shit"
+                                    font.pixelSize : Config.componentSize
+                                    anchors.verticalCenter : parent.verticalCenter
+                                    anchors.horizontalCenter : parent.horizontalCenter
+                                
+															}
+														}
+                        }
+											}
                 }
             }
         }
