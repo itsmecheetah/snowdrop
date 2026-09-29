@@ -1,4 +1,10 @@
 # Snowdrop
+## Contents
+* [Features](#Features)
+* [Screenshots](#Screenshots (these are slightly outdated lol))
+* [Configuring](#Configuring)
+* [Links](#Links)
+
 ## Features
 * Clock
 * Connection indicator
