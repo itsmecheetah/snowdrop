@@ -14,7 +14,6 @@
 More to come soon!
 
 ## Screenshots
-(these are slightly outdated lol)
 
 <img src="https://github.com/itsmecheetah/snowdrop/blob/main/screenshots/0.png?raw=true" width="600" height="400">
 <img src="https://github.com/itsmecheetah/snowdrop/blob/main/screenshots/1.png?raw=true" width="600" height="400">
