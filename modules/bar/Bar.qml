@@ -32,7 +32,7 @@ Variants {
             border.width : Config.borderWidth
             RowLayout {
                 id : rowLayout
-                spacing : Config.componentSpacing
+                spacing : Config.moduleSpacing
                 Layout.preferredWidth : 0
                 anchors.verticalCenter : parent.verticalCenter
                 anchors.horizontalCenter : parent.horizontalCenter
@@ -47,7 +47,7 @@ Variants {
                     }
                     contentItem : Image {
                         source : "nix.png"
-                        sourceSize.width : Config.componentSize + Config.modules.icon.sizeOffset
+                        sourceSize.width : Config.moduleSize + Config.modules.icon.sizeOffset
                         anchors.verticalCenter : parent.verticalCenter
                     }
                     anchors.verticalCenter : parent.verticalCenter
@@ -97,7 +97,7 @@ Variants {
                         radius : 16
                     }
                     contentItem : Text {
-                        font.pixelSize : Config.componentSize
+                        font.pixelSize : Config.moduleSize
                         color : Config.colors.text
                         text : Time.time
                         anchors.verticalCenter : parent.verticalCenter
@@ -149,7 +149,7 @@ Variants {
                         radius : 16
                     }
                     contentItem : Text {
-                        font.pixelSize : Config.componentSize
+                        font.pixelSize : Config.moduleSize
                         color : Config.colors.text
                         text : Connection.connectionStateWithExtras
                         anchors.verticalCenter : parent.verticalCenter
@@ -183,7 +183,7 @@ Variants {
                                 Text {
                                     color : Config.colors.text
                                     text : "i exclusively use \nethernet bc desktop\nso i'll do this if i get\na laptop (wifi selector)"
-                                    font.pixelSize : Config.componentSize
+                                    font.pixelSize : Config.moduleSize
                                     anchors.verticalCenter : parent.verticalCenter
                                     anchors.horizontalCenter : parent.horizontalCenter
                                 }
@@ -201,7 +201,7 @@ Variants {
                         radius : 16
                     }
                     contentItem : Text {
-                        font.pixelSize : Config.componentSize
+                        font.pixelSize : Config.moduleSize
                         color : Config.colors.text
                         text : Battery.currentPercentage
                         anchors.verticalCenter : parent.verticalCenter
@@ -235,7 +235,7 @@ Variants {
                                 Text {
                                     color : Config.colors.text
                                     text : "battery shit"
-                                    font.pixelSize : Config.componentSize
+                                    font.pixelSize : Config.moduleSize
                                     anchors.verticalCenter : parent.verticalCenter
                                     anchors.horizontalCenter : parent.horizontalCenter
                                 

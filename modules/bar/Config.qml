@@ -10,8 +10,8 @@ Singleton {
 	property alias exclusiveZoneOffset: adapter.exclusiveZoneOffset
 	property alias rounding: adapter.rounding
 	property alias borderWidth: adapter.borderWidth
-	property alias componentSpacing: adapter.componentSpacing
-	property alias componentSize: adapter.componentSize
+	property alias moduleSpacing: adapter.moduleSpacing
+	property alias moduleSize: adapter.moduleSize
 	property alias colors: adapter.colors
 	property alias modules: adapter.modules
 
@@ -42,8 +42,8 @@ Singleton {
 			property real rounding: 16
 			property int borderWidth: 2
 
-			property real componentSpacing: 10
-			property int componentSize: 19
+			property real moduleSpacing: 10
+			property int moduleSize: 19
 
 			property JsonObject colors: JsonObject {
 				property string background: "#85222222"
