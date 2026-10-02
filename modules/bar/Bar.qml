@@ -47,7 +47,7 @@ Variants {
                     }
                     contentItem : Image {
                         source : "nix.png"
-                        sourceSize.width : 23
+                        sourceSize.width : Config.componentSize + Config.modules.icon.sizeOffset
                         anchors.verticalCenter : parent.verticalCenter
                     }
                     anchors.verticalCenter : parent.verticalCenter
@@ -149,7 +149,7 @@ Variants {
                         radius : 16
                     }
                     contentItem : Text {
-                        font.pixelSize : 19
+                        font.pixelSize : Config.componentSize
                         color : Config.colors.text
                         text : Connection.connectionStateWithExtras
                         anchors.verticalCenter : parent.verticalCenter
@@ -201,7 +201,7 @@ Variants {
                         radius : 16
                     }
                     contentItem : Text {
-                        font.pixelSize : 19
+                        font.pixelSize : Config.componentSize
                         color : Config.colors.text
                         text : Battery.currentPercentage
                         anchors.verticalCenter : parent.verticalCenter

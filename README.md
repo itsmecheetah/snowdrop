@@ -31,8 +31,6 @@ All Snowdrop config options can be found & modified at `~/.config/snowdrop-shell
 
 Keep in mind that Snowdrop is still in development, meaning that breaking changes may occur!
 
-Also I'm pretty sure the config file is completely broken right now (its not THAAAT important though right??)
-
 ## Links
 
 [Quickshell](https://quickshell.org)

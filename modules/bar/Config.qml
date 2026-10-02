@@ -54,6 +54,7 @@ Singleton {
 			property JsonObject modules: JsonObject {
 				property JsonObject icon: JsonObject {
 					property bool enabled: true
+					property int sizeOffset: 0
 				}
 				property JsonObject clock: JsonObject {
 					property bool enabled: true
