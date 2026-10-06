@@ -27,7 +27,9 @@ More to come soon!
 maybe i'll add a flake at some point but im too lazy rn
 
 ## Configuring 
-All Snowdrop config options can be found & modified at `~/.config/snowdrop-shell/config.json`. 
+All Snowdrop config options can be found & modified at `~/.config/snowdrop-shell/config.json`.
+
+See `CONFIGURING.md` for descriptions of each option.
 
 Keep in mind that Snowdrop is still in development, meaning that breaking changes may occur!
 
