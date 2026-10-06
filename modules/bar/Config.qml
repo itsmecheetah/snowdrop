@@ -56,6 +56,7 @@ Singleton {
 				property JsonObject icon: JsonObject {
 					property bool enabled: true
 					property int sizeOffset: 0
+					property string selection: "nixos"
 				}
 				property JsonObject clock: JsonObject {
 					property bool enabled: true

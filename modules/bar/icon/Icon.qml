@@ -16,7 +16,7 @@ Button {
 	}
 
 	contentItem: Image {
-		source: "../nix.png"
+		source: "../../../assets/icons/" + Config.modules.icon.selection
 		sourceSize.width: Config.moduleSize + Config.modules.icon.sizeOffset
 		anchors.verticalCenter: parent.verticalCenter
 	}
