@@ -66,6 +66,7 @@ Singleton {
 				}
 				property JsonObject battery: JsonObject {
 					property bool enabled: true
+					property real criticalThreshold: 0.1
 				}
 			}
 		}

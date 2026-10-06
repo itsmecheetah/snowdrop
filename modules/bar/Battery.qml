@@ -7,7 +7,7 @@ Singleton {
 	readonly property string currentPercentage: (Math.round(UPower.displayDevice.percentage * 100)) + "%"
 	
 	readonly property string desiredColor: {
-		if (UPower.displayDevice.percentage < 0.1) {
+		if (UPower.displayDevice.percentage < Config.modules.battery.criticalThreshold) {
 			return Config.colors.textCritical
 		}
 		return Config.colors.text
