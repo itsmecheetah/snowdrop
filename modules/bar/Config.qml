@@ -55,7 +55,7 @@ Singleton {
 			property JsonObject modules: JsonObject {
 				property JsonObject icon: JsonObject {
 					property bool enabled: true
-					property int sizeOffset: 0
+					property int sizeOffset: 4
 					property string selection: "nixos"
 				}
 				property JsonObject clock: JsonObject {
