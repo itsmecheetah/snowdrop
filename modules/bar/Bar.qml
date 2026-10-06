@@ -104,7 +104,7 @@ Variants {
                     }
                     contentItem : Text {
                         font.pixelSize : Config.moduleSize
-                        color : Config.colors.text
+                        color : Battery.desiredColor
                         text : Battery.currentPercentage
                         anchors.verticalCenter : parent.verticalCenter
                     }

@@ -49,6 +49,7 @@ Singleton {
 				property string background: "#85222222"
 				property string border: "#ffffff"
 				property string text: "#ffffff"
+				property string textCritical: "#ff5555"
 			}
 
 			property JsonObject modules: JsonObject {
